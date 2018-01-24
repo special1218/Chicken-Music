@@ -1,10 +1,19 @@
 <template>
   <div id="playlists">
   	  <p class="list">热门歌单推荐</p>
-    	<div v-for="data in playList">
-    		<img :src="data.imgurl"/>
-    		
-    	</div>
+
+    	<ul class="lists">
+    		<li v-for="data in playList">
+    			<div id="left">
+    				<img v-lazy="data.imgurl"/>
+    			</div>
+    			<div id="right">
+    				<p class="top">{{data.creator.name}}</p>
+    				<p class="botttom">{{data.dissname}}</p>
+    			</div>
+    		</li>
+    	</ul>
+    	
     	
   </div>
 </template>
@@ -34,10 +43,26 @@ export default {
 .list{
 	text-align: center;
 	color: #F8C731;
-	padding: 8px 0;
+	padding: 12px 0;
 }
 img{
-	width: 100px;
-	height: 100px;
+	width: 76px;
+	height: 76px;
+	float: left;
+	padding: 0 18px;
+}
+.lists li{
+	list-style: none;
+	width: 100%;
+	height: 120px;
+	
+}
+.top{
+	padding: 6px 0;
+}
+.botttom{
+	padding: 6px 0;
+	font-size: 14px;
+	color: grey;
 }
 </style>
