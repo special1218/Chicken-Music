@@ -1,7 +1,6 @@
 <template>
   <div id="playlists">
   	  <p class="list">热门歌单推荐</p>
-
     	<ul class="lists">
     		<li v-for="data in playList">
     			<div id="left">
@@ -13,8 +12,6 @@
     			</div>
     		</li>
     	</ul>
-    	
-    	
   </div>
 </template>
 
@@ -27,14 +24,11 @@ export default {
 		}
 	},
   created(){
-  	
 	 	const url="http://www.taoquan.store/qqmusic/musiclist.php "
-
 		this.$http.get(url).then((res)=>{
 			this.playList=res.data.data.list
 			console.log(res.data.data.list)
 		})
-
   }
 }
 </script>
@@ -54,8 +48,7 @@ img{
 .lists li{
 	list-style: none;
 	width: 100%;
-	height: 120px;
-	
+	height: 100px;
 }
 .top{
 	padding: 6px 0;

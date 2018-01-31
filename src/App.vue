@@ -1,7 +1,10 @@
 <template>
   <div id="app">
-    <header1></header1>
-    <nav1></nav1>
+    <div id="header1">
+    	<header1></header1>
+      <nav1></nav1>
+    </div>
+    <div id="empty"></div>
     <keep-alive>
     	<router-view></router-view>
     </keep-alive>
@@ -26,5 +29,15 @@ export default {
 *{
   margin: 0;
   padding:0; 
+}
+#header1{
+	width: 100%;
+	z-index: 10;
+	background: #222;
+	position: fixed;
+}
+#empty{
+	width: 100%;
+	height: 100px;
 }
 </style>

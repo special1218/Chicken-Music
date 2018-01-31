@@ -5,10 +5,11 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 Vue.use(VueAwesomeSwiper, /* { default global options } */)
 
-import body01 from '../components/body/body01'
-import body02 from '../components/body/body02'
+import lists from '../components/body/lists'
+import singer from '../components/body/singer'
 import body03 from '../components/body/body03'
 import body04 from '../components/body/body04'
+import singersXQ from '../components/singersXQ/singerXQ'
 
 Vue.use(Router)
 
@@ -16,15 +17,21 @@ export default new Router({
   routes: [
     {
       path:'/',
-      redirect:'/body01'
+      redirect:'/lists'
     },
     {
-      path: '/body01',
-      component: body01
+      path: '/lists',
+      component: lists
     },
     {
-      path: '/body02',
-      component: body02
+      path: '/singer',
+      component: singer,
+      children: [
+	      {
+				 	path: ':id',
+				 	component: singersXQ
+			  }
+      ]
     },
     {
       path: '/body03',

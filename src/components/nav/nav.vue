@@ -2,10 +2,10 @@
   <div id="nav1">
     <ul>
       <li>
-        <router-link to="/body01">推荐</router-link>
+        <router-link to="/lists">推荐</router-link>
       </li>
       <li>
-        <router-link to="/body02">歌手</router-link>
+        <router-link to="/singer">歌手</router-link>
       </li>
       <li>
         <router-link to="/body03">排行</router-link>
@@ -38,11 +38,12 @@ export default {
   padding: 6px 12px;
 }
 #nav1 ul li a{
-   color: #F8c731;
+   color: #7e7d80;
    text-decoration: none;
 }
 #nav1 ul li a:hover{
   padding-bottom: 4px;
+  color: #F8C731;
   border-bottom: 2px solid #F8c731;
 }
 </style>
